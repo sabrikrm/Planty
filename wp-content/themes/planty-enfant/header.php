@@ -13,10 +13,10 @@
     <div class="header-container">
 
         <div class="site-logo">
-    <a href="<?php echo home_url('/'); ?>">
+      <a href="<?php echo home_url('/'); ?>">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Logo.png" alt="Logo Planty">
     </a>
-</div>
+ </div>
 
         <div class="header-right">
             <nav class="main-menu">
