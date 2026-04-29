@@ -27,9 +27,6 @@ body {
     box-sizing: border-box;
 }
 
-.intro {
-    margin-top: 0;
-}
 
 img {
     max-width: 100%;
@@ -45,6 +42,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 80px;
     padding: 0;
 }
 
@@ -63,7 +61,7 @@ img {
 .header-right {
     display: flex;
     align-items: center;
-    height: 100px;
+    height: 80px;
 }
 
 .main-menu ul {
@@ -87,17 +85,16 @@ img {
     margin-right: 40px;
 }
 
-.menu-commander{
+.menu-commander a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 200px;
-    height: 100px;
+    width: 236px;
+    height: 80px;
     background-color: #d9a29b;
     color: #fff;
     text-decoration: none;
     font-size: 16px;
-    
 }
 
 
@@ -798,6 +795,8 @@ background-color: #fff;
 .page-id-12 .wp-site-blocks {
     background-color: #4d9748 !important;
 }
+
+
 
 /*breakpoint*/ 
 
