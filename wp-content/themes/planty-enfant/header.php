@@ -18,22 +18,22 @@
       </a>
  </div>
 
-        <div class="header-right">
-            <nav class="main-menu">
-                <?php
-                wp_nav_menu(array(
-                    'theme_location' => 'menu-principal',
-                    'container' => false
-                ));
-                ?>
-            </nav>
+      <div class="header-right">
 
-            <?php if (is_user_logged_in()) : ?>
-                <a class="admin-link" href="<?php echo admin_url(); ?>">Admin</a>
-            <?php endif; ?>
+    <?php if (is_user_logged_in()) : ?>
+        <a class="admin-link" href="<?php echo admin_url(); ?>">Admin</a>
+    <?php endif; ?>
 
-          
-        </div>
+    <nav class="main-menu">
+        <?php
+        wp_nav_menu(array(
+            'theme_location' => 'menu-principal',
+            'container' => false
+        ));
+        ?>
+    </nav>
+
+</div>
 
     </div>
 

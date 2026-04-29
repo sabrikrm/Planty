@@ -64,6 +64,10 @@ img {
     height: 80px;
 }
 
+.main-menu {
+    display: flex;
+}
+
 .main-menu ul {
     display: flex;
     align-items: center;
