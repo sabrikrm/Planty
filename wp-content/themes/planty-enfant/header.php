@@ -12,28 +12,24 @@
 <header class="site-header">
     <div class="header-container">
 
+       
         <div class="site-logo">
-      <a href="<?php echo home_url('/'); ?>">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Logo.png" alt="Logo Planty">
-      </a>
- </div>
+            <a href="<?php echo home_url('/'); ?>">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Logo.png" alt="Logo Planty">
+            </a>
+        </div>
 
-      <div class="header-right">
-
-    <?php if (is_user_logged_in()) : ?>
-        <a class="admin-link" href="<?php echo admin_url(); ?>">Admin</a>
-    <?php endif; ?>
-
-    <nav class="main-menu">
-        <?php
-        wp_nav_menu(array(
-            'theme_location' => 'menu-principal',
-            'container' => false
-        ));
-        ?>
-    </nav>
-
-</div>
+      
+        <div class="header-right">
+            <nav class="main-menu">
+                <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'menu-principal',
+                    'container' => false
+                ));
+                ?>
+            </nav>
+        </div>
 
     </div>
 
