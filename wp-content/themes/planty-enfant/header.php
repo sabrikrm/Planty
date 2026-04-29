@@ -32,7 +32,7 @@
                 <a class="admin-link" href="<?php echo admin_url(); ?>">Admin</a>
             <?php endif; ?>
 
-            <a class="commander-link" href="<?php echo home_url('/commander'); ?>">Commander</a>
+          
         </div>
 
     </div>
