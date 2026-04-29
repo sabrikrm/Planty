@@ -814,12 +814,18 @@ background-color: #fff;
 
 .header-container {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    height: auto;
+}
+
+.site-logo {
+    width: 100%;
+    text-align: center;
 }
 
 .site-logo a {
+    display: block;
     padding: 16px 0;
-    text-align: center;
 }
 
 .site-logo img {
@@ -828,7 +834,9 @@ background-color: #fff;
 }
 
 .header-right {
+    width: 100%;
     flex-direction: column;
+    align-items: center;
     height: auto;
 }
 
@@ -838,38 +846,41 @@ background-color: #fff;
 
 .main-menu ul {
     flex-direction: column;
-    align-items: stretch; 
+    align-items: center;
     gap: 0;
     padding: 0;
+    margin: 0;
     width: 100%;
 }
 
 .main-menu li {
     width: 100%;
+    margin: 0;
+    text-align: center;
 }
 
 .main-menu a,
 .admin-link {
     display: block;
     width: 100%;
-    padding: 14px 20px;
-    font-size: 14px;
-    text-align: center; 
-}
-
-.admin-link {
+    padding: 14px 0;
     margin: 0;
+    font-size: 14px;
+    text-align: center;
 }
 
 .commander-link {
     width: 100%;
     height: 56px;
+    margin: 0;
+    padding: 0;
     font-size: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* formulaire commande */
 .commander-form .commande-columns {
     display: grid;
     grid-template-columns: 1fr;
@@ -883,4 +894,5 @@ background-color: #fff;
 .commander-form .commande-column:last-child::before {
     display: none;
 }
+
 }
