@@ -811,104 +811,470 @@ background-color: #fff;
 
 /*breakpoint*/ 
 
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* pre mobile 1024 */
+
+@media screen and (max-width: 1024px) {
+
+    .header-container {
+        padding: 0 20px;
+    }
+
+    .intro-title,
+    .rencontrer-title,
+    .commander-title {
+        font-size: 34px;
+    }
+
+    .intro-images {
+        min-height: 430px;
+    }
+
+    .intro-images .can-center {
+        width: 300px;
+    }
+
+    .intro-images .f-left,
+    .intro-images .f-right {
+        width: 130px;
+    }
+
+    .gout-grid,
+    .commander-products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap: 30px;
+    }
+
+    .avis-columns {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .commander-form {
+        max-width: 760px;
+        margin: 0 auto;
+    }
+
+    .commander-form .commande-columns {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+    }
+}
+
+/* mobile 767*/
+
 @media screen and (max-width: 767px) {
 
-.header-container {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-}
+    body {
+        text-align: center;
+    }
 
-.site-logo {
-    width: 100%;
-    text-align: center;
-}
+    /* header  logo*/
 
-.site-logo a {
-    display: block;
-    padding: 16px 0;
-}
+    .header-container,
+    .header-right,
+    .main-menu ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
 
-.site-logo img {
-    width: 150px;
-    margin: 0 auto;
-}
+    .site-logo,
+    .main-menu,
+    .main-menu li {
+        width: 100%;
+        text-align: center;
+    }
 
-.header-right {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-}
+    .site-logo a {
+        display: block;
+        padding: 16px 0;
+    }
 
-.main-menu {
-    width: 100%;
-}
+    .site-logo img {
+        width: 150px;
+        margin: 0 auto;
+    }
 
-.main-menu ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-}
+    .main-menu ul {
+        gap: 0;
+        padding: 0;
+        margin: 0;
+    }
 
-.main-menu li {
-    width: 100%;
-    margin: 0;
-    text-align: center;
-}
+    .main-menu a,
+    .admin-link,
+    .menu-commander a {
+        display: block;
+        width: 100%;
+        padding: 14px 0;
+        margin: 0;
+        font-size: 14px;
+        text-align: center;
+    }
 
-.main-menu a,
-.admin-link {
-    display: block;
-    width: 100%;
-    padding: 14px 0;
-    margin: 0;
-    font-size: 14px;
-    text-align: center;
-}
+    .menu-commander a {
+        height: 56px;
+    }
 
-.commander-link {
-    width: 100%;
-    height: 56px;
-    margin: 0;
-    padding: 0;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* formulaire commande */
-.commander-form .commande-columns {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-}
-
-.commander-form .commande-column {
-    width: 100%;
-}
-
-.commander-form .commande-column:last-child::before {
-    display: none;
-}
-
+    /* accueil */
 
     .intro,
-    .description,
     .gouts,
     .avis,
     .rencontrer,
-    .contact {
-        width: 100%;
-        max-width: 100%;
+    .contact,
+    .commander-product {
         padding-left: 16px;
         padding-right: 16px;
-        overflow: hidden;
     }
 
+    .intro {
+        padding-top: 50px;
+        padding-bottom: 45px;
+    }
 
+    .intro-title,
+    .description-title,
+    .gouts-title,
+    .avis-title,
+    .rencontrer-title,
+    .contact-title,
+    .commander-title {
+        max-width: 310px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
+    .intro-images {
+        min-height: 300px;
+    }
+
+    .intro-images .can-center {
+        width: 190px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+    }
+
+    .intro-images .f-left {
+        width: 85px;
+        right: 50%;
+        bottom: 55px;
+    }
+
+    .intro-images .f-right {
+        width: 85px;
+        left: 50%;
+        bottom: 55px;
+    }
+
+    .description {
+        padding: 85px 16px 65px;
+        margin-top: -70px;
+    }
+
+    .description-text,
+    .gouts-text,
+    .rencontrer-text {
+        max-width: 310px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .gout-grid,
+    .commander-products-grid {
+        width: 100%;
+        max-width: 310px;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 25px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .gout-item,
+    .product-item {
+        width: 100%;
+        max-width: 240px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .gout-item figcaption {
+        font-size: 34px;
+    }
+
+    /* avis */
+
+    .avis-columns {
+        width: 100%;
+        max-width: 310px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 45px;
+    }
+
+    .avis-item {
+        width: 100%;
+        max-width: 280px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .avis-img,
+    .avis-name,
+    .avis-text {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .avis-img img {
+        width: 126px;
+        margin: 0 auto;
+    }
+
+    .avis-name {
+        margin: 0;
+        font-size: 22px;
+    }
+
+    .avis-text {
+        max-width: 260px;
+        margin: 0 auto;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    /*rencontrer */
+
+    .rencontrer-flower {
+        position: static;
+        margin: 0 auto 25px;
+    }
+
+    .rencontrer-flower img {
+        width: 90px;
+        margin: 0 auto;
+    }
+
+    .equipe {
+        padding: 100px 16px 60px;
+    }
+
+    .equipe-title {
+        font-size: 28px;
+    }
+
+    .f-equipe {
+        text-align: center;
+        left: auto;
+    }
+
+    .f-equipe img {
+        margin: 0 auto;
+    }
+
+    .contact-form {
+        max-width: 310px;
+        margin: 0 auto;
+    }
+
+    .contact-form label {
+        text-align: left;
+        font-size: 16px;
+    }
+
+    .contact-flower {
+        display: none;
+    }
+
+    /* commander  */
+
+    .page-id-12 .site,
+    .page-id-12 .site-content,
+    .page-id-12 main,
+    .page-id-12 .entry-content {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .page-id-12 .commander-product {
+        width: 100%;
+        padding-top: 55px;
+        padding-bottom: 70px;
+        text-align: center;
+    }
+
+    .page-id-12 .commander-title,
+    .page-id-12 .commander-text {
+        max-width: 310px;
+        margin: 0 auto 35px;
+        text-align: center;
+    }
+
+    .page-id-12 .commander-title {
+        font-size: 28px;
+    }
+
+    .page-id-12 .commander-text {
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
+    .page-id-12 .commander-separator {
+        width: 100%;
+        max-width: 310px;
+        margin: 0 auto 35px;
+    }
+
+    .page-id-12 .commander-products-grid {
+        max-width: 240px;
+        margin-bottom: 50px;
+    }
+
+    .page-id-12 .commander-img {
+        width: 220px;
+        height: 146px;
+        margin: 0 auto 18px;
+    }
+
+    .page-id-12 .commander-img figcaption {
+        font-size: 24px;
+        line-height: 1.1;
+    }
+
+    .page-id-12 .commander-qty {
+        width: 60px;
+        height: 50px;
+        margin: 15px auto 0;
+    }
+
+    .page-id-12 .commander-form {
+        width: 100%;
+        max-width: 310px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .page-id-12 .commande-columns {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .page-id-12 .commande-column {
+        width: 100%;
+        max-width: 310px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .page-id-12 .commande-column:last-child::before {
+        display: none;
+    }
+
+    .page-id-12 .commander-form h3 {
+        font-size: 30px;
+        line-height: 1.15;
+        margin: 0 auto 30px;
+    }
+
+    .page-id-12 .commander-form label {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .page-id-12 .commander-form input,
+    .page-id-12 .commander-form textarea,
+    .page-id-12 .commander-form select {
+        width: 100%;
+        max-width: 280px;
+        height: 55px;
+        display: block;
+        margin: 10px auto 26px;
+    }
+
+    .page-id-12 .commander-form .wpcf7-submit,
+    .page-id-12 .commander-form input[type="submit"] {
+        width: 200px;
+        height: 55px;
+        margin: 30px auto 0;
+        display: block;
+    }
+}
+
+/* 320 px minimum consigne du projet */
+
+@media screen and (max-width: 360px) {
+
+    .intro-title,
+    .gouts-title,
+    .avis-title,
+    .rencontrer-title,
+    .contact-title,
+    .page-id-12 .commander-title {
+        font-size: 22px;
+    }
+
+    .page-id-12 .commander-text {
+        font-size: 22px;
+    }
+
+    .page-id-12 .commander-form h3 {
+        font-size: 26px;
+    }
+
+    .page-id-12 .commander-products-grid,
+    .page-id-12 .commander-form,
+    .page-id-12 .commande-column {
+        max-width: 288px;
+    }
+
+    .page-id-12 .commander-img {
+        width: 220px;
+        max-width: 100%;
+        height: 145px;
+    }
+
+    .page-id-12 .commander-form input,
+    .page-id-12 .commander-form textarea,
+    .page-id-12 .commander-form select {
+        max-width: 260px;
+    }
 }
