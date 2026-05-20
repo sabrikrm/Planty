@@ -139,11 +139,12 @@ img {
 /* intro */
 .intro-title {
     font-family: 'Syne', sans-serif;
-    font-size: 42px;
+    font-size: 38px;
     font-weight: 800;
     text-transform: uppercase;
     text-align: center;
     color: green;
+    margin-top: 65px;
 }
 .intro {
     background-color: #ece3da;
@@ -234,7 +235,7 @@ img {
 
 .gouts-title {
     font-family: 'Syne', sans-serif;
-    font-size: 48px;
+    font-size: 30px;
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: 2px;
@@ -321,7 +322,7 @@ background-color: #fff;
 
 .avis-title {
     font-family: 'Syne', sans-serif;
-    font-size: 42px;
+    font-size: 30px;
     font-weight: 800;
     line-height: 1.1;
     text-transform: uppercase;
@@ -894,5 +895,20 @@ background-color: #fff;
 .commander-form .commande-column:last-child::before {
     display: none;
 }
+
+
+    .intro,
+    .description,
+    .gouts,
+    .avis,
+    .rencontrer,
+    .contact {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+        overflow: hidden;
+    }
+
 
 }
