@@ -1,21 +1,19 @@
 <?php
 
-// Enqueue styles
 function planty_enqueue_styles() {
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
     wp_enqueue_style('child-style', get_stylesheet_uri(), array('parent-style'));
 }
 add_action('wp_enqueue_scripts', 'planty_enqueue_styles');
 
+function planty_theme_setup() {
+    add_theme_support('custom-logo');
 
-
-function planty_menu() {
     register_nav_menus(array(
         'menu-principal' => 'Menu principal'
     ));
 }
-add_action('after_setup_theme', 'planty_menu');
-
+add_action('after_setup_theme', 'planty_theme_setup');
 
 function planty_add_admin_link($items, $args) {
     if ($args->theme_location === 'menu-principal' && is_user_logged_in()) {

@@ -14,10 +14,12 @@
 
        
         <div class="site-logo">
-            <a href="<?php echo home_url('/'); ?>">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Logo.png" alt="Logo Planty">
-            </a>
-        </div>
+    <?php
+    if (has_custom_logo()) {
+        the_custom_logo();
+    }
+    ?>
+</div>
 
       
         <div class="header-right">

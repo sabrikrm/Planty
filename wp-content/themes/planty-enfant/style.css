@@ -46,13 +46,11 @@ img {
     padding: 0;
 }
 
-.site-logo a {
+.custom-logo-link {
     display: block;
-    padding-left: 30px;
-    text-decoration: none;
 }
 
-.site-logo img {
+.custom-logo {
     width: 200px;
     height: auto;
     display: block;
