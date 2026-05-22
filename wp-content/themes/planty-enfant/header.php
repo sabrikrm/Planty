@@ -13,13 +13,13 @@
     <div class="header-container">
 
        
-        <div class="site-logo">
+   <div class="site-logo">
     <?php
     if (has_custom_logo()) {
         the_custom_logo();
     }
     ?>
-</div>
+  </div>
 
       
         <div class="header-right">
